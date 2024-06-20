@@ -1,6 +1,4 @@
-//1
-import SimpleLightbox from "simplelightbox";
-// Додатковий імпорт стилів
+import createMarkup from "simplelightbox";
 import "simplelightbox/dist/simple-lightbox.min.css";
 
 const images = [
@@ -78,30 +76,13 @@ const images = [
     <img
       class="gallery-image"
       src="${image.preview}"
-      data-source="${image.original}"
       alt="${image.description}"
     />
   </a>
 </li> `).join("");
- }
- 
+ };
  galleryContainer.insertAdjacentHTML("afterbegin", createMarkup(images));
-  galleryContainer.addEventListener('click', (event) => {
-    event.preventDefault();
-    if (event.target.classList.contains('gallery-image')) {
-      const lagesImages = event.target.dataset.source;
-      console.log(lagesImages);
-  
-   const instance = basicLightbox.create(
-    ` <img src="${lagesImages}">`);
-   instance.show();} });
 
-<li class="gallery-item">
-	<a class="gallery-link" href="large-image.jpg">
-		<img 
-			class="gallery-image" 
-			src="small-image.jpg" 
-			alt="Image description" 
-			/>
-	</a>
-</li>
+var lightbox = new SimpleLightbox('.gallery a', { });
+// var lightbox = $('.gallery a').simpleLightbox({ download : 250 }); // перший вар-т
+var lightbox = $('.gallery a.img.alt').simpleLightbox({ download : 250 }); // другий вар-т
