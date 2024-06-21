@@ -63,6 +63,11 @@ ol {
     width: 360px;
     height: 200px;
 }
+
+.form-link {
+  text-decoration: none;
+}
+
 .gallery-link {
   text-decoration: none;
 }
