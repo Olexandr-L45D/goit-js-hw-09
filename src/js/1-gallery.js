@@ -1,4 +1,5 @@
-import createMarkup from "simplelightbox";
+//import createMarkup from "simplelightbox";
+import SimpleLightbox from "simplelightbox";
 import "simplelightbox/dist/simple-lightbox.min.css";
 
 const images = [
@@ -85,3 +86,4 @@ const images = [
 
 
 var lightbox = new SimpleLightbox('.gallery a', { captionDelay: 250 });
+ var lightbox = $('.gallery a').simpleLightbox({ captionDelay: 250 });
