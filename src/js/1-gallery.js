@@ -83,6 +83,5 @@ const images = [
  };
  galleryContainer.insertAdjacentHTML("afterbegin", createMarkup(images));
 
-var lightbox = new SimpleLightbox('.gallery a', { });
-// var lightbox = $('.gallery a').simpleLightbox({ download : 250 }); // перший вар-т
-var lightbox = $('.gallery a.img.alt').simpleLightbox({ download : 250 }); // другий вар-т
+
+var lightbox = new SimpleLightbox('.gallery a', { captionDelay: 250 });
