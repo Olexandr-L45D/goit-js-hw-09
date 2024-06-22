@@ -51,6 +51,16 @@ ol {
   align-items: center;
   display: block;
 }
+
+.feedback-form {
+  width: 358px;
+  padding: 0px;
+  margin: 0 auto;
+  align-items: center;
+  text-align: left;
+  display: block;
+}
+
 .container {
   width: 1440px;
   padding: 0px;
