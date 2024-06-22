@@ -44,7 +44,13 @@ ol {
   padding: 0;
   margin: 0;
 }
-
+.form-container {
+  width: 360px;
+  padding: 0px;
+  margin: 0 auto;
+  align-items: center;
+  display: block;
+}
 .container {
   width: 1440px;
   padding: 0px;
