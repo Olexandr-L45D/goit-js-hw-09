@@ -59,11 +59,11 @@ ol {
 }
 
 .gallery-container {
-  min-width: 320px;
+  width: 1440px;
   padding: 0px;
   margin: 0 auto;
-  max-width: 1400px;
   align-items: center;
+  display: flex;
 }
   img {
     display: flex;
@@ -92,7 +92,7 @@ ul {
 .gallery {
   display: flex;
   list-style: none;
-  width: 408px;
+  width: 1400px;
   padding: 0px;
   background-color: white;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
