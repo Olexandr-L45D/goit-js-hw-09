@@ -24,9 +24,10 @@ const formTrackChanges = document.querySelector(".feedback-form");
   console.log(formData);
 }
 
-// const json = JSON.stringify(formData)
+ const json = JSON.stringify(formData)
 const LS_Ky = "feedback-form-state";
 localStorage.setItem(LS_Ky, JSON.stringify(formData));
 const valueForm = localStorage.getItem(LS_Ky);
 console.log(valueForm);
 console.log(JSON.parse(valueForm));
+console.log(json);
