@@ -45,11 +45,13 @@ ol {
   margin: 0;
 }
 .form-container {
-  width: 408px;
+  width: 360px;
   padding: 0px;
   margin: 0 auto;
   align-items: center;
   display: block;
+  text-align: center;
+  flex-direction: column; 
 }
 
 /* .feedback-form {
@@ -58,7 +60,7 @@ ol {
   padding: 0px;
   margin: 0 auto;
   align-items: left;
-  text-align: left; */
+  text-align: left; 
   flex-direction: column; 
 } */
 
