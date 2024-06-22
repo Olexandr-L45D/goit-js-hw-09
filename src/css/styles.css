@@ -57,6 +57,19 @@ ol {
    flex-direction: column;  
 }
 
+.input {
+  border-radius: 2px;
+  padding: 8px;
+  width: 360px;
+  height: 72px;
+}
+.textarea {
+  border-radius: 2px;
+  padding: 8px;
+  width: 360px;
+  height: 112px;
+}
+
 /* .feedback-form {
   display: flex;
   width: 360px;
