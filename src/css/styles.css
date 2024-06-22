@@ -58,7 +58,8 @@ ol {
   margin: 0 auto;
   align-items: center;
   text-align: left;
-  display: block;
+  display: flex;
+  flex-direction: column;
 }
 
 .container {
