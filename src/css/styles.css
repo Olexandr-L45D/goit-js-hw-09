@@ -49,9 +49,11 @@ ol {
   padding: 0px;
   margin: 0 auto;
   align-items: center;
-  display: block;
+  /* display: block; */
+  display: flex;
   text-align: center;
-  flex-direction: column; 
+  flex-direction: row;
+  /* flex-direction: column;  */
 }
 
 /* .feedback-form {
