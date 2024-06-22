@@ -51,9 +51,9 @@ ol {
   align-items: center;
   /* display: block; */
   display: flex;
-  /* text-align: left;  */
-  flex-direction: row;
-  flex-wrap: wrap;
+  text-align: center;
+  /* flex-direction: row;
+  flex-wrap: wrap; */
    flex-direction: column;  
 }
 
