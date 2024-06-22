@@ -45,19 +45,19 @@ ol {
   margin: 0;
 }
 .form-container {
-  width: 360px;
+  width: 408px;
   padding: 0px;
   margin: 0 auto;
   align-items: center;
-  display: flex;
+  display: block;
 }
 
 .feedback-form {
-  width: 358px;
+  width: 360px;
   padding: 0px;
   margin: 0 auto;
-  align-items: center;
-  text-align: center;
+  align-items: left;
+  text-align: left;
   display: flex;
   flex-direction: column;
 }
