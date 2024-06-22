@@ -57,7 +57,7 @@ ol {
   padding: 0px;
   margin: 0 auto;
   align-items: center;
-  text-align: left;
+  text-align: center;
   display: flex;
   flex-direction: column;
 }
