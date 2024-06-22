@@ -49,11 +49,10 @@ ol {
   padding: 0px;
   margin: 0 auto;
   align-items: center;
-  /* display: block; */
+  
   display: flex;
   text-align: center;
-  /* flex-direction: row;
-  flex-wrap: wrap; */
+  
    flex-direction: column;  
 }
 
