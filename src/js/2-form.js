@@ -25,7 +25,7 @@ if ( message.value.trim()  === "") {
 }
   console.log(emailInputText);
   formData.push(emailInputText).join("")
-  
+  console.log(formData);
   formTrackChanges.addEventListener('input', handlerInput);
 
 function handlerInput(evt) {
