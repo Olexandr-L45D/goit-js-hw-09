@@ -21,6 +21,7 @@ function handlerInput(evt) {
     function handlerSubmit(event) {
         event.preventDefault()
         const {email, message} = event.currentTarget.elements;
+
           const emailInputText = {
     email: email.value.trim(),
     message: message.value.trim(),
@@ -32,6 +33,7 @@ if ( message.value.trim()  === "") {
     alert("Fill please all fields")  
 }
   console.log(emailInputText);
+  formData.push(emailInputText).join("")
   form.reset()
 }
     //     const textareaAray = document.querySelector('textarea')
