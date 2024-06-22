@@ -1,25 +1,16 @@
-//2form.js
+
 const formData = {
     email: "", message: ""
 };
 
 const formTrackChanges = document.querySelector(".feedback-form");
-formTrackChanges.append(placeholder);
-placeholder.textContent = "Fill please all fields"
-formTrackChanges.addEventListener('input', handlerInput);
+// formTrackChanges.append(placeholder);
+// placeholder.textContent = "Fill please all fields"
 
-function handlerInput(evt) {
-      const inputAray = document.querySelector('input')
-      inputAray.textContent = evt.currentTarget.value.trim();
-    
-     if (evt.currentTarget.value.trim() === "") {
-        inputAray.textContent = "Fill please all fields"
-     }
-    };
     formTrackChanges.addEventListener('submit', handlerSubmit);
 
     function handlerSubmit(event) {
-        event.preventDefault()
+        // event.preventDefault()
         const {email, message} = event.currentTarget.elements;
 
           const emailInputText = {
@@ -34,7 +25,18 @@ if ( message.value.trim()  === "") {
 }
   console.log(emailInputText);
   formData.push(emailInputText).join("")
-  form.reset()
+  
+  formTrackChanges.addEventListener('input', handlerInput);
+
+function handlerInput(evt) {
+      const inputAray = document.querySelector('input')
+      inputAray.textContent = evt.currentTarget.value.trim();
+    
+     if (evt.currentTarget.value.trim() === "") {
+        inputAray.textContent = "Fill please all fields"
+     }
+    };
+//   form.reset()
 }
     //     const textareaAray = document.querySelector('textarea')
     //     textareaAray.textContent = event.currentTarget.value.trim();
