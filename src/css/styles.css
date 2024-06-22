@@ -49,10 +49,9 @@ ol {
   padding: 0px;
   margin: 0 auto;
   align-items: center;
-  
   display: flex;
-  text-align: center;
-  
+  text-align: left;
+  /* vertical-align:auto; */
    flex-direction: column;  
 }
 
@@ -60,13 +59,13 @@ ol {
   border-radius: 2px;
   padding: 8px;
   width: 360px;
-  height: 72px;
+  height: 40px;
 }
 .textarea {
   border-radius: 2px;
   padding: 8px;
   width: 360px;
-  height: 112px;
+  height: 80px;
 }
 
 /* .feedback-form {
