@@ -4,13 +4,11 @@ const formData = {
 };
 
 const formTrackChanges = document.querySelector(".feedback-form");
-// formTrackChanges.append(placeholder);
-// placeholder.textContent = "Fill please all fields"
 
     formTrackChanges.addEventListener('submit', handlerSubmit);
 
     function handlerSubmit(event) {
-        // event.preventDefault()
+        
         const {email, message} = event.currentTarget.elements;
 
           const emailInputText = {
@@ -21,35 +19,14 @@ const formTrackChanges = document.querySelector(".feedback-form");
     alert("All form fields must be filled in") 
     return;
   }
-
-//   if ( email.value.trim()  === "") {
-//     alert("Fill please all fields") 
-// };
-// if ( message.value.trim()  === "") {
-//     alert("Fill please all fields")  
-// }
   console.log(emailInputText);
   formData.push(emailInputText).join("")
   console.log(formData);
-
-//   formTrackChanges.addEventListener('input', handlerInput);
-
-// function handlerInput(evt) {
-//       const inputAray = document.querySelector('input')
-//       inputAray.textContent = evt.currentTarget.value.trim();
-    
-//      if (evt.currentTarget.value.trim() === "") {
-//         inputAray.textContent = "Fill please all fields"
-//      }
-//     };
-//   form.reset()
 }
 
-
-    //     const textareaAray = document.querySelector('textarea')
-    //     textareaAray.textContent = event.currentTarget.value.trim();
-    
-    //  if (event.currentTarget.value.trim() === "") {
-    //     textareaAray.textContent = "Fill please all fields"
-    //  }
-    // }
+// const json = JSON.stringify(formData)
+const LS_Ky = "feedback-form-state";
+localStorage.setItem(LS_Ky, JSON.stringify(formData));
+const valueForm = localStorage.getItem(LS_Ky);
+console.log(valueForm);
+console.log(JSON.parse(valueForm));

@@ -51,7 +51,6 @@ ol {
   align-items: center;
   display: flex;
   text-align: left;
-  /* vertical-align:auto; */
    flex-direction: column;  
 }
 
@@ -68,15 +67,6 @@ ol {
   height: 80px;
 }
 
-/* .feedback-form {
-  display: flex;
-  width: 360px;
-  padding: 0px;
-  margin: 0 auto;
-  align-items: left;
-  text-align: left; 
-  flex-direction: column; 
-} */
 
 .container {
   width: 1440px;
