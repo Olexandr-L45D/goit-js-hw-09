@@ -56,8 +56,8 @@ ol {
   width: 360px;
   padding: 0px;
   margin: 0 auto;
-  align-items: left;
-  text-align: left;
+  /* align-items: left;
+  text-align: left; */
   display: flex;
   flex-direction: column;
 }
