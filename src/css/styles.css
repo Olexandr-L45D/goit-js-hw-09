@@ -52,15 +52,15 @@ ol {
   display: block;
 }
 
-.feedback-form {
+/* .feedback-form {
+  display: flex;
   width: 360px;
   padding: 0px;
   margin: 0 auto;
-  /* align-items: left;
+  align-items: left;
   text-align: left; */
-  display: flex;
-  flex-direction: column;
-}
+  flex-direction: column; 
+} */
 
 .container {
   width: 1440px;
