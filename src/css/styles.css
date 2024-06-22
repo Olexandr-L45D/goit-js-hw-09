@@ -59,7 +59,6 @@ ol {
 }
 
 .gallery-container {
-  display: flex;
   min-width: 320px;
   padding: 0px;
   margin: 0 auto;
