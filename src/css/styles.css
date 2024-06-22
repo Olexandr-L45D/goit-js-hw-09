@@ -53,6 +53,7 @@ ol {
   display: flex;
   text-align: left; 
   flex-direction: row;
+  flex-wrap: wrap;
   /* flex-direction: column;  */
 }
 
