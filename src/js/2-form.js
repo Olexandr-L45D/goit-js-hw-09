@@ -78,11 +78,13 @@ formTrackChanges.addEventListener("submit", (evt) => {
   evt.preventDefault();
 	console.log(evt.target.elements.message.value);
   localStorage.removeItem(localStorageKey);
-  const formDataValue = formData;
-        formDataValue = evt.currentTarget.elements; 
-        
-        formDataValue.email = email.value.trim(),
-        formDataValue.message = message.value.trim() ;
+  // const formDataValue = formData;
+  //       formDataValue = evt.currentTarget.elements; 
+  //       formDataValue.email = email.value.trim(),
+  //       formDataValue.message = message.value.trim() ;
+  formData = evt.currentTarget.elements; 
+  formData.email = email.value.trim(),
+  formData.message = message.value.trim() ;
     if ( email.value.trim()  === "" || message.value.trim()  === "") {
       alert("All form fields must be filled in") 
       return;
