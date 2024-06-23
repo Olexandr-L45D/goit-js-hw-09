@@ -75,6 +75,9 @@ formTrackChanges.addEventListener("submit", (evt) => {
   evt.preventDefault();
 	console.log(evt.target.elements.message.value);
   localStorage.removeItem(localStorageKey);
+  if ( email.value.trim()  === "" || message.value.trim()  === "" ) {
+        alert("All form fields must be filled in") 
+         return; };
   formTrackChanges.reset();
 });
 
