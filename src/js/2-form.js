@@ -62,7 +62,7 @@ const formTrackChanges = document.querySelector(".feedback-form");
 const textarea = formTrackChanges.elements.message;
 const localStorageKey = "feedback-form-state";
 
-input.value = localStorage.getItem(localStorageKey);
+// input.value = localStorage.getItem(localStorageKey);
 textarea.value = localStorage.getItem(localStorageKey);
 
 formTrackChanges.addEventListener("input", (evt) => {
