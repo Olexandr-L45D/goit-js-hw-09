@@ -2,40 +2,43 @@
 const formData = {
     email: "", message: ""
 };
-
+const LocalStor_Kay = "feedback-form-state";
 const formTrackChanges = document.querySelector(".feedback-form");
 
     formTrackChanges.addEventListener('submit', handlerSubmit);
-
-    function handlerSubmit(event) {
-      event.preventDefault();
-        const {email, message} = event.currentTarget.elements;
-
-          const emailInputText = {
-    email: email.value.trim(),
-    message: message.value.trim(),
-  };
-  if ( email.value.trim()  === "" || message.value.trim()  === "" ) {
-    alert("All form fields must be filled in") 
-    return;
-  }
-  // console.log(emailInputText);
-  // formData.push(emailInputText).join("")
-  // console.log(formData);
-}
-console.log(emailInputText);
-formData.push(emailInputText).join("")
-console.log(formData);
-const LS_Ky = "feedback-form-state";
-localStorage.setItem(LS_Ky, JSON.stringify(formData));
-const valueForm = localStorage.getItem(LS_Ky);
-console.log(valueForm);
-console.log(JSON.parse(valueForm));
-
-formTrackChanges.addEventListener('input', handlerinput);
-
+    formTrackChanges.addEventListener('input', handlerinput);
+    
 function handlerinput(evt) {
+  localStorage.setItem(LS_Ky, JSON.stringify(formData));
+
       const textValue = document.querySelector('input')
       input.textContent = evt.currentTarget.value.trim();
-    
+    // тут ще записую в дАТА(треба другий метод не пуш)
+// formData.push(textValue).join("")
      }
+     formData.push(textValue).join("")
+
+//      function StorageParse(params) {
+//       const valueForm = localStorage.getItem(LocalStor_Kay);
+//     console.log(valueForm);
+//     console.log(JSON.parse(valueForm));
+//     }
+//     console.log(StorageParse);
+    
+
+//     function handlerSubmit(event) {
+//       event.preventDefault();
+//         const {email, message} = event.currentTarget.elements;
+
+//           const emailInputText = {
+//     email: email.value.trim(),
+//     message: message.value.trim(),
+//   };
+//   if ( email.value.trim()  === "" || message.value.trim()  === "" ) {
+//     alert("All form fields must be filled in") 
+//     return;
+//   }
+//   console.log(emailInputText);
+//   console.log(formData);
+  
+// }
