@@ -11,7 +11,7 @@ const formTrackChanges = document.querySelector(".feedback-form");
 function handlerinput(event) {
   event.preventDefault();
   const formDataTrac = formData;
-  formDataTrac = evt.currentTarget.elements; 
+  formDataTrac = event.currentTarget.elements; 
       const formTrack = {
         email: email.value.trim(),
         message: message.value.trim()} ;
@@ -32,10 +32,10 @@ function handlerinput(event) {
 //     console.log(StorageParse);
     
 
-    function handlerSubmit(eve) {
-      eve.preventDefault();
+    function handlerSubmit(even) {
+      even.preventDefault();
       const formDataValue = formData;
-      formDataValue = evt.currentTarget.elements; 
+      formDataValue = even.currentTarget.elements; 
       const valueContent = {
         email: email.value.trim(),
         message: message.value.trim()} ;
