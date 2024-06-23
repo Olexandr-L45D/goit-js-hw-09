@@ -33,7 +33,7 @@ console.log(JSON.parse(valueForm));
 formTrackChanges.addEventListener('input', handlerinput);
 
 function handlerinput(evt) {
-      const textValue = document.querySelector('.input')
+      const textValue = document.querySelector('input')
       input.textContent = evt.currentTarget.value.trim();
     
      }
