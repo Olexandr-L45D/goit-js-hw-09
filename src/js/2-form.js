@@ -5,15 +5,15 @@ const formData = {
 const LocalStor_Kay = "feedback-form-state";
 const formTrackChanges = document.querySelector(".feedback-form");
 
-    formTrackChanges.addEventListener('submit', handlerSubmit);
+    // formTrackChanges.addEventListener('submit', handlerSubmit);
     formTrackChanges.addEventListener('input', handlerinput);
-    
+    const formDataTrac = formData;
 function handlerinput(event) {
   event.preventDefault();
-  const formDataTrac = formData;
+  // const formDataTrac = formData;
   formDataTrac = event.currentTarget.elements; 
       const formTrack = {
-        email: email.value.trim(),
+        email: email.value.trim(), 
         message: message.value.trim()} ;
   // formData.email = email.value.trim();
   // formData.message = message.value.trim();
@@ -32,21 +32,21 @@ function handlerinput(event) {
 //     console.log(StorageParse);
     
 
-    function handlerSubmit(even) {
-      even.preventDefault();
-      const formDataValue = formData;
-      formDataValue = even.currentTarget.elements; 
-      const valueContent = {
-        email: email.value.trim(),
-        message: message.value.trim()} ;
-  if ( email.value.trim()  === "" || message.value.trim()  === "") {
-    alert("All form fields must be filled in") 
-    return;
-  }
-  console.log(valueContent);
-  console.log(formData);
-  // form.reset()
-}
+//     function handlerSubmit(even) {
+//       even.preventDefault();
+//       const formDataValue = formData;
+//       formDataValue = even.currentTarget.elements; 
+//       const valueContent = {
+//         email: email.value.trim(),
+//         message: message.value.trim()} ;
+//   if ( email.value.trim()  === "" || message.value.trim()  === "") {
+//     alert("All form fields must be filled in") 
+//     return;
+//   }
+//   console.log(valueContent);
+//   console.log(formData);
+//    form.reset()
+// }
 
 // const { email, password} = evt.currentTarget.elements; 
 //   const datase = {
