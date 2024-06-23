@@ -1,26 +1,26 @@
 
-const formData = {
-    email: "", message: ""
-};
-const LocalStor_Kay = "feedback-form-state";
-const formTrackChanges = document.querySelector(".feedback-form");
+// const formData = {
+//     email: "", message: ""
+// };
+// const LocalStor_Kay = "feedback-form-state";
+// const formTrackChanges = document.querySelector(".feedback-form");
 
-    // formTrackChanges.addEventListener('submit', handlerSubmit);
-    formTrackChanges.addEventListener('input', handlerinput);
+//     // formTrackChanges.addEventListener('submit', handlerSubmit);
+//     formTrackChanges.addEventListener('input', handlerinput);
     
-function handlerinput(event) {
-  event.preventDefault();
+// function handlerinput(event) {
+//   // event.preventDefault();
   
-  const { email, message} = event.currentTarget.elements; 
-      const formTrack = {
-        email: email.value.trim(), 
-        message: message.value.trim()} ;
+//   const { email, message} = event.currentTarget.elements; 
+//       const formTrack = {
+//         email: email.value.trim(), 
+//         message: message.value.trim()} ;
       
-      localStorage.setItem(LocalStor_Kay, JSON.stringify(formData));
-    console.log(formData);
-    console.log(formTrack);
+//       localStorage.setItem(LocalStor_Kay, JSON.stringify(formData));
+//     console.log(formData);
+//     console.log(formTrack);
   
-     }
+//      }
     
 
 //      function StorageParse(params) {
@@ -56,4 +56,40 @@ function handlerinput(event) {
 //     alert("All form fields must be filled in") 
 //     return;
 // }
-//   console.log(datase);
+// console.log(datase);
+
+const formTrackChanges = document.querySelector(".feedback-form");
+const textarea = form.elements.message;
+const localStorageKey = "feedback-form-state";
+
+input.value = localStorage.getItem(localStorageKey);
+textarea.value = localStorage.getItem(localStorageKey);
+
+formTrackChanges.addEventListener("input", (evt) => {
+  localStorage.setItem(localStorageKey, evt.target.value);
+ 
+});
+
+formTrackChanges.addEventListener("submit", (evt) => {
+  evt.preventDefault();
+	console.log(evt.target.elements.message.value);
+  localStorage.removeItem(localStorageKey);
+  formTrackChanges.reset();
+});
+
+// const form = document.querySelector(".feedback-form");
+// const textarea = form.elements.message;
+// const localStorageKey = "goit-example-message";
+
+// textarea.value = localStorage.getItem(localStorageKey) ?? "";
+
+// form.addEventListener("input", (evt) => {
+//   localStorage.setItem(localStorageKey, evt.target.value);
+// });
+
+// form.addEventListener("submit", (evt) => {
+//   evt.preventDefault();
+// 	console.log(evt.target.elements.message.value);
+//   localStorage.removeItem(localStorageKey);
+//   form.reset();
+// });
