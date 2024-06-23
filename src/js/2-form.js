@@ -8,11 +8,16 @@ const formTrackChanges = document.querySelector(".feedback-form");
     formTrackChanges.addEventListener('submit', handlerSubmit);
     formTrackChanges.addEventListener('input', handlerinput);
     
-function handlerinput(evt) {
+function handlerinput(event) {
+  event.preventDefault();
   localStorage.setItem(LS_Ky, JSON.stringify(formData));
-
       const textValue = document.querySelector('input')
       input.textContent = evt.currentTarget.value.trim();
+      formData = event.currentTarget.elements;
+      const emailInputText = {
+            email: email.value.trim(),
+            message: message.value.trim(),
+          };
     // тут ще записую в дАТА(треба другий метод не пуш)
 // formData.push(textValue).join("")
      }
@@ -28,12 +33,7 @@ function handlerinput(evt) {
 
 //     function handlerSubmit(event) {
 //       event.preventDefault();
-//         const {email, message} = event.currentTarget.elements;
-
-//           const emailInputText = {
-//     email: email.value.trim(),
-//     message: message.value.trim(),
-//   };
+//    
 //   if ( email.value.trim()  === "" || message.value.trim()  === "" ) {
 //     alert("All form fields must be filled in") 
 //     return;
