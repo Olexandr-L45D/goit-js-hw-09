@@ -80,9 +80,9 @@ formTrackChanges.addEventListener("submit", (evt) => {
   localStorage.removeItem(localStorageKey);
   const formDataValue = formData;
         formDataValue = evt.currentTarget.elements; 
-        const valueContent = {
-          email: email.value.trim(),
-          message: message.value.trim()} ;
+        
+        formDataValue.email = email.value.trim(),
+        formDataValue.message = message.value.trim() ;
     if ( email.value.trim()  === "" || message.value.trim()  === "") {
       alert("All form fields must be filled in") 
       return;
