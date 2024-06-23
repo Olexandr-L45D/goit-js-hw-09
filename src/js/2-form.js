@@ -5,23 +5,19 @@ const formData = {
 const LocalStor_Kay = "feedback-form-state";
 const formTrackChanges = document.querySelector(".feedback-form");
 
-    // formTrackChanges.addEventListener('submit', handlerSubmit);
+    formTrackChanges.addEventListener('submit', handlerSubmit);
     formTrackChanges.addEventListener('input', handlerinput);
     
 function handlerinput(event) {
   event.preventDefault();
-  localStorage.setItem(LS_Ky, JSON.stringify(formData));
       const textValue = document.querySelector('input')
-      input.textContent = evt.currentTarget.value.trim();
-      formData = event.currentTarget.elements;
-      const emailInputText = {
-            email: email.value.trim(),
-            message: message.value.trim(),
-          };
-    // тут ще записую в дАТА(треба другий метод не пуш)
-// formData.push(textValue).join("")
+      textValue.textContent = event.currentTarget.value.trim();
+      formData.email = event.currentTarget.elements;
+      formData.message = event.currentTarget.elements;
+      localStorage.setItem(LocalStor_Kay, JSON.stringify(formData));
+    console.log(formData);
      }
-     formData.push(textValue).join("")
+    
 
 //      function StorageParse(params) {
 //       const valueForm = localStorage.getItem(LocalStor_Kay);
@@ -31,14 +27,15 @@ function handlerinput(event) {
 //     console.log(StorageParse);
     
 
-//     function handlerSubmit(event) {
-//       event.preventDefault();
-//    
-//   if ( email.value.trim()  === "" || message.value.trim()  === "" ) {
-//     alert("All form fields must be filled in") 
-//     return;
-//   }
-//   console.log(emailInputText);
-//   console.log(formData);
+    function handlerSubmit(event) {
+      event.preventDefault();
+      formData.email = email.value.trim();
+      formData.message = message.value.trim();
+  if ( email.value.trim()  === "" || message.value.trim()  === "" ) {
+    alert("All form fields must be filled in") 
+    return;
+  }
   
-// }
+  console.log(formData);
+  
+}
