@@ -7,20 +7,20 @@ const formTrackChanges = document.querySelector(".feedback-form");
 
     // formTrackChanges.addEventListener('submit', handlerSubmit);
     formTrackChanges.addEventListener('input', handlerinput);
-    const formDataTrac = formData;
+    
 function handlerinput(event) {
   event.preventDefault();
-  // const formDataTrac = formData;
+  const formDataTrac = formData;
   formDataTrac = event.currentTarget.elements; 
-      const formTrack = {
-        email: email.value.trim(), 
-        message: message.value.trim()} ;
-  // formData.email = email.value.trim();
-  // formData.message = message.value.trim();
+      // const formTrack = {
+      //   email: email.value.trim(), 
+      //   message: message.value.trim()} ;
+      formDataTrac.email = email.value.trim();
+      formDataTrac.message = message.value.trim();
       localStorage.setItem(LocalStor_Kay, JSON.stringify(formData));
     // console.log(formData);
-    console.log(formTrack);
-    // console.log(formDataTrac);
+    // console.log(formTrack);
+    console.log(formDataTrac);
      }
     
 
