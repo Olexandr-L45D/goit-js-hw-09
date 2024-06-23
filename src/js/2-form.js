@@ -27,8 +27,8 @@ function handlerinput(event) {
 //     console.log(StorageParse);
     
 
-    function handlerSubmit(event) {
-      event.preventDefault();
+    function handlerSubmit(eve) {
+      eve.preventDefault();
       // formData.email = email.value.trim();
       // formData.message = message.value.trim();
   if ( email.value.trim()  === "" || message.value.trim()  === "" ) {
