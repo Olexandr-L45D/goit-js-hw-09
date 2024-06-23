@@ -10,8 +10,10 @@ const formTrackChanges = document.querySelector(".feedback-form");
     
 function handlerinput(event) {
   event.preventDefault();
-  const formTrack = document.querySelector(".message");  
-  formTrack.textContent = event.currentTarget.elements;
+  formData = evt.currentTarget.elements; 
+      const formTrack = {
+        email: email.value.trim(),
+        message: message.value.trim()} ;
   formData.email = email.value.trim();
   formData.message = message.value.trim();
       localStorage.setItem(LocalStor_Kay, JSON.stringify(formData));
@@ -30,13 +32,26 @@ function handlerinput(event) {
 
     function handlerSubmit(eve) {
       eve.preventDefault();
-      // formData.email = email.value.trim();
-      // formData.message = message.value.trim();
-  if ( formData.email.value.trim()  === "" || formData.message.value.trim()  === "" ) {
+      formData = evt.currentTarget.elements; 
+      const valueContent = {
+        email: email.value.trim(),
+        message: message.value.trim()} ;
+  if ( email.value.trim()  === "" || message.value.trim()  === "") {
     alert("All form fields must be filled in") 
     return;
   }
-  
+  console.log(valueContent);
   console.log(formData);
   // form.reset()
 }
+
+// const { email, password} = evt.currentTarget.elements; 
+//   const datase = {
+//     email: email.value.trim(),
+//     password: password.value.trim(),
+//   };
+//   if ( email.value.trim()  === "" || password.value.trim()  === "" ) {
+//     alert("All form fields must be filled in") 
+//     return;
+// }
+//   console.log(datase);
