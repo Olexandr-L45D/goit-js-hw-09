@@ -8,7 +8,7 @@ const formTrackChanges = document.querySelector(".feedback-form");
     formTrackChanges.addEventListener('submit', handlerSubmit);
 
     function handlerSubmit(event) {
-        
+      event.preventDefault();
         const {email, message} = event.currentTarget.elements;
 
           const emailInputText = {
@@ -29,3 +29,11 @@ localStorage.setItem(LS_Ky, JSON.stringify(formData));
 const valueForm = localStorage.getItem(LS_Ky);
 console.log(valueForm);
 console.log(JSON.parse(valueForm));
+
+formTrackChanges.addEventListener('input', handlerinput);
+
+function handlerinput(evt) {
+      const textValue = document.querySelector('.input')
+      input.textContent = evt.currentTarget.value.trim();
+    
+     }
