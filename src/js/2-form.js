@@ -11,9 +11,9 @@ const formTrackChanges = document.querySelector(".feedback-form");
 function handlerinput(event) {
   event.preventDefault();
       const textValue = document.querySelector('input')
-      textValue.textContent = event.currentTarget.value.trim();
-      formData.email = event.currentTarget.elements;
-      formData.message = event.currentTarget.elements;
+      textValue.textContent = event.currentTarget.elements;
+      formData.email = email.value.trim();
+      formData.message = message.value.trim();
       localStorage.setItem(LocalStor_Kay, JSON.stringify(formData));
     console.log(formData);
      }
@@ -37,5 +37,5 @@ function handlerinput(event) {
   }
   
   console.log(formData);
-  
+  // form.reset()
 }
