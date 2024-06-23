@@ -10,17 +10,16 @@ const formTrackChanges = document.querySelector(".feedback-form");
     
 function handlerinput(event) {
   event.preventDefault();
-  const formDataTrac = formData;
-  formDataTrac = event.currentTarget.elements; 
-      // const formTrack = {
-      //   email: email.value.trim(), 
-      //   message: message.value.trim()} ;
-      formDataTrac.email = email.value.trim();
-      formDataTrac.message = message.value.trim();
+  
+  const { email, message} = evt.currentTarget.elements; 
+      const formTrack = {
+        email: email.value.trim(), 
+        message: message.value.trim()} ;
+      
       localStorage.setItem(LocalStor_Kay, JSON.stringify(formData));
-    // console.log(formData);
-    // console.log(formTrack);
-    console.log(formDataTrac);
+    console.log(formData);
+    console.log(formTrack);
+  
      }
     
 
