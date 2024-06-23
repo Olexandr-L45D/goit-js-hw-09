@@ -5,7 +5,7 @@ const formData = {
 const LocalStor_Kay = "feedback-form-state";
 const formTrackChanges = document.querySelector(".feedback-form");
 
-    formTrackChanges.addEventListener('submit', handlerSubmit);
+    // formTrackChanges.addEventListener('submit', handlerSubmit);
     formTrackChanges.addEventListener('input', handlerinput);
     
 function handlerinput(event) {
