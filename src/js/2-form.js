@@ -79,7 +79,7 @@ formTrackChanges.addEventListener("submit", (evt) => {
 	console.log(evt.target.elements.message.value);
   localStorage.removeItem(localStorageKey);
   const formDataValue = formData;
-        formDataValue = even.currentTarget.elements; 
+        formDataValue = evt.currentTarget.elements; 
         const valueContent = {
           email: email.value.trim(),
           message: message.value.trim()} ;
