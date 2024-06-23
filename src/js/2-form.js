@@ -1,7 +1,6 @@
 
 // const formData = {
-//     email: "", message: ""
-// };
+//     email: "", message: "" };
 // const LocalStor_Kay = "feedback-form-state";
 // const formTrackChanges = document.querySelector(".feedback-form");
 
@@ -57,6 +56,9 @@
 //     return;
 // }
 // console.log(datase);
+
+const formData = {
+     email: "", message: "" };
 
 const formTrackChanges = document.querySelector(".feedback-form");
 const textareaTaxt = formTrackChanges.elements.message;
