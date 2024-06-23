@@ -23,7 +23,7 @@ const formTrackChanges = document.querySelector(".feedback-form");
   // formData.push(emailInputText).join("")
   // console.log(formData);
 }
-formData.push(emailInputText).join("")
+formData.push({email, message} ).join("")
 console.log(formData);
 const LS_Ky = "feedback-form-state";
 localStorage.setItem(LS_Ky, JSON.stringify(formData));
