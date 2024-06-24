@@ -26,8 +26,8 @@ console.log(valueFormParse);
 
 formTrackChanges.addEventListener("submit", (evt) => {
   evt.preventDefault();
-	console.log(evt.target.elements.email.value);
-  console.log(evt.target.elements.message.value);
+	// console.log(evt.target.elements.email.value);
+  // console.log(evt.target.elements.message.value);
   localStorage.removeItem(localStorageKey);
   const { email, message} = evt.currentTarget.elements; 
   const valueContent = {
