@@ -18,9 +18,8 @@ inputTaxt.textContent = evt.currentTarget.value;
 const textareaTaxt = document.querySelector('textarea')
 textareaTaxt.textContent = evt.currentTarget.value;
 formData = {inputTaxt, textareaTaxt };
-const valueForm = JSON.stringify(formData);
 
-console.log(valueForm);
+const valueForm = JSON.stringify(formData);
 const valueFormParse = JSON.parse(valueForm);
 console.log(valueFormParse);
 });
