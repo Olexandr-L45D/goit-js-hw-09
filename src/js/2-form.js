@@ -24,6 +24,7 @@ textareaTaxt.textContent = evt.currentTarget.value;
 // localStorage.setItem(localStorageKey, JSON.stringify(formData));
 const valueForm = JSON.stringify(formData);
 console.log(valueForm);
+const valueFormParse = JSON.parse(valueForm);
 });
 
 formTrackChanges.addEventListener("submit", (evt) => {
@@ -43,5 +44,5 @@ formTrackChanges.addEventListener("submit", (evt) => {
   formTrackChanges.reset();
 });
 
-const valueFormParse = JSON.parse(valueForm);
+// const valueFormParse = JSON.parse(valueForm);
 console.log(valueFormParse);
