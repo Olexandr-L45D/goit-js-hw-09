@@ -21,10 +21,10 @@ textareaTaxt.textContent = evt.currentTarget.value;
 // document.getElementById( "formData" ).innerText = valueFormSum;
 // document.getElementById( "formData" ).innerText = inputTaxt.textContent;
 // document.getElementById( "formData" ).innerText = textareaTaxt.textContent;
-// localStorage.setItem(localStorageKey, JSON.stringify(formData));
-const valueForm = JSON.stringify(formData);
-console.log(valueForm);
-const valueFormParse = JSON.parse(valueForm);
+ localStorage.setItem(localStorageKey, JSON.stringify(formData));
+// const valueForm = JSON.stringify(formData);
+// console.log(valueForm);
+const valueFormParse = JSON.parse(formData);
 console.log(valueFormParse);
 });
 
@@ -46,5 +46,3 @@ formTrackChanges.addEventListener("submit", (evt) => {
   formTrackChanges.reset();
 });
 
-// const valueFormParse = JSON.parse(valueForm);
-// console.log(valueFormParse);
