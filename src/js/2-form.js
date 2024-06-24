@@ -21,7 +21,9 @@ textareaTaxt.textContent = evt.currentTarget.value;
 // document.getElementById( "formData" ).innerText = valueFormSum;
 // document.getElementById( "formData" ).innerText = inputTaxt.textContent;
 // document.getElementById( "formData" ).innerText = textareaTaxt.textContent;
-localStorage.setItem(localStorageKey, JSON.stringify(formData));
+// localStorage.setItem(localStorageKey, JSON.stringify(formData));
+const valueForm = JSON.stringify(formData);
+console.log(valueForm);
 });
 
 formTrackChanges.addEventListener("submit", (evt) => {
@@ -41,10 +43,5 @@ formTrackChanges.addEventListener("submit", (evt) => {
   formTrackChanges.reset();
 });
 
-// const inputTaxt = document.querySelector('.input')
-// inputTaxt.textContent = evt.currentTarget.value.trim();
-// const textareaTaxt = document.querySelector('.textarea')
-// textareaTaxt.textContent = evt.currentTarget.value.trim();
-
-// const valueFormSum = document.getElementById( 'idvalueform' ).value;
-// document.getElementById( "formData" ).innerText = valueFormSum;
+const valueFormParse = JSON.parse(valueForm);
+console.log(valueFormParse);
