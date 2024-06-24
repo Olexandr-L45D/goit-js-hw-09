@@ -25,11 +25,13 @@ textareaTaxt.textContent = evt.currentTarget.value;
 const valueForm = JSON.stringify(formData);
 console.log(valueForm);
 const valueFormParse = JSON.parse(valueForm);
+console.log(valueFormParse);
 });
 
 formTrackChanges.addEventListener("submit", (evt) => {
   evt.preventDefault();
-	console.log(evt.target.elements.message.value);
+	console.log(evt.target.elements.email.value);
+  console.log(evt.target.elements.message.value);
   localStorage.removeItem(localStorageKey);
   const { email, message} = evt.currentTarget.elements; 
   const valueContent = {
@@ -45,4 +47,4 @@ formTrackChanges.addEventListener("submit", (evt) => {
 });
 
 // const valueFormParse = JSON.parse(valueForm);
-console.log(valueFormParse);
+// console.log(valueFormParse);
