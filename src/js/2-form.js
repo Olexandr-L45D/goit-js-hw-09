@@ -8,8 +8,8 @@ const textareaTaxts = formTrackChanges.elements.message;
 const inputTaxts = formTrackChanges.elements.email;
 const localStorageKey = "feedback-form-state";
 
-inputTaxt.value = localStorage.getItem(localStorageKey);
-textareaTaxt.value = localStorage.getItem(localStorageKey);
+inputTaxts.value = localStorage.getItem(localStorageKey);
+textareaTaxts.value = localStorage.getItem(localStorageKey);
 
 formTrackChanges.addEventListener("input", (evt) => {
   localStorage.setItem(localStorageKey, evt.target.value);
