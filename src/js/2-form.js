@@ -15,7 +15,7 @@ formTrackChanges.addEventListener("input", (evt) => {
   localStorage.setItem(localStorageKey, evt.target.value);
   const inputTaxt = document.querySelector('.input')
 inputTaxt.textContent = evt.currentTarget.value;
-const textareaTaxt = document.querySelector('.textarea')
+const textareaTaxt = document.querySelector('textarea')
 textareaTaxt.textContent = evt.currentTarget.value;
 const valueFormSum = document.getElementById( 'idvalueform' ).value;
 document.getElementById( "formData" ).innerText = valueFormSum;
