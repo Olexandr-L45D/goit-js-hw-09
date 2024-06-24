@@ -5,7 +5,7 @@ const formData = {
 
 const formTrackChanges = document.querySelector(".feedback-form");
 const textareaTaxt = formTrackChanges.elements.message;
-const inputTaxt = formTrackChanges.elements.message;
+const inputTaxt = formTrackChanges.elements.email;
 const localStorageKey = "feedback-form-state";
 
 inputTaxt.value = localStorage.getItem(localStorageKey);
@@ -13,7 +13,13 @@ textareaTaxt.value = localStorage.getItem(localStorageKey);
 
 formTrackChanges.addEventListener("input", (evt) => {
   localStorage.setItem(localStorageKey, evt.target.value);
-  localStorage.setItem(localStorageKey, JSON.stringify(formData));
+  const inputTaxt = document.querySelector('.input')
+inputTaxt.textContent = evt.currentTarget.value.trim();
+const textareaTaxt = document.querySelector('.textarea')
+textareaTaxt.textContent = evt.currentTarget.value.trim();
+const valueFormSum = document.getElementById( 'idvalueform' ).value;
+document.getElementById( "formData" ).innerText = valueFormSum;
+localStorage.setItem(localStorageKey, JSON.stringify(formData));
 });
 
 formTrackChanges.addEventListener("submit", (evt) => {
@@ -33,3 +39,10 @@ formTrackChanges.addEventListener("submit", (evt) => {
   formTrackChanges.reset();
 });
 
+// const inputTaxt = document.querySelector('.input')
+// inputTaxt.textContent = evt.currentTarget.value.trim();
+// const textareaTaxt = document.querySelector('.textarea')
+// textareaTaxt.textContent = evt.currentTarget.value.trim();
+
+// const valueFormSum = document.getElementById( 'idvalueform' ).value;
+// document.getElementById( "formData" ).innerText = valueFormSum;
