@@ -20,7 +20,7 @@ textareaTaxt.textContent = evt.currentTarget.value;
 
 //  localStorage.setItem(localStorageKey, JSON.stringify(formData));
 const valueForm = JSON.stringify(formData);
-valueForm = `${textareaTaxt.textContent} ${inputTaxt.textContent}`
+valueForm = `${inputTaxt} ${textareaTaxt}`
 console.log(valueForm);
 const valueFormParse = JSON.parse(formData);
 console.log(valueFormParse);
