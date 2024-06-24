@@ -21,7 +21,7 @@ formData = {inputTaxt, textareaTaxt };
 const valueForm = JSON.stringify(formData);
 
 console.log(valueForm);
-const valueFormParse = JSON.parse(formData);
+const valueFormParse = JSON.parse(valueForm);
 console.log(valueFormParse);
 });
 
