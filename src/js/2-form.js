@@ -1,6 +1,6 @@
 
 
-const formData = {
+let formData = {
      email: "", message: "" };
 
 const formTrackChanges = document.querySelector(".feedback-form");
@@ -18,7 +18,6 @@ inputTaxt.textContent = evt.currentTarget.value;
 const textareaTaxt = document.querySelector('textarea')
 textareaTaxt.textContent = evt.currentTarget.value;
 formData = {inputTaxt, textareaTaxt };
-//  localStorage.setItem(localStorageKey, JSON.stringify(formData));
 const valueForm = JSON.stringify(formData);
 
 console.log(valueForm);
