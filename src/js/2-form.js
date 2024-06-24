@@ -17,13 +17,11 @@ formTrackChanges.addEventListener("input", (evt) => {
 inputTaxt.textContent = evt.currentTarget.value;
 const textareaTaxt = document.querySelector('textarea')
 textareaTaxt.textContent = evt.currentTarget.value;
-// const valueFormSum = document.getElementById( 'idvalueform' ).value;
-// document.getElementById( "formData" ).innerText = valueFormSum;
-// document.getElementById( "formData" ).innerText = inputTaxt.textContent;
-// document.getElementById( "formData" ).innerText = textareaTaxt.textContent;
- localStorage.setItem(localStorageKey, JSON.stringify(formData));
-// const valueForm = JSON.stringify(formData);
-// console.log(valueForm);
+
+//  localStorage.setItem(localStorageKey, JSON.stringify(formData));
+const valueForm = JSON.stringify(formData);
+valueForm = `${textareaTaxt.textContent} ${inputTaxt.textContent}`
+console.log(valueForm);
 const valueFormParse = JSON.parse(formData);
 console.log(valueFormParse);
 });
