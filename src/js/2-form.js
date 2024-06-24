@@ -17,7 +17,7 @@ formTrackChanges.addEventListener("input", (evt) => {
 inputTaxt.textContent = evt.currentTarget.value;
 const textareaTaxt = document.querySelector('textarea')
 textareaTaxt.textContent = evt.currentTarget.value;
-formData = `${inputTaxt} ${textareaTaxt}`
+formData = {inputTaxt, textareaTaxt };
 //  localStorage.setItem(localStorageKey, JSON.stringify(formData));
 const valueForm = JSON.stringify(formData);
 
