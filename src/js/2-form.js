@@ -4,8 +4,8 @@ let formData = {
      email: "", message: "" };
 
 const formTrackChanges = document.querySelector(".feedback-form");
-const textareaTaxts = formTrackChanges.elements.message;
-const inputTaxts = formTrackChanges.elements.email;
+let inputTaxts = formTrackChanges.elements.email;
+let textareaTaxts = formTrackChanges.elements.message;
 const localStorageKey = "feedback-form-state";
 
 inputTaxts.value = localStorage.getItem(localStorageKey);
@@ -13,12 +13,11 @@ textareaTaxts.value = localStorage.getItem(localStorageKey);
 
 formTrackChanges.addEventListener("input", (evt) => {
   localStorage.setItem(localStorageKey, evt.target.value);
-  const inputTaxt = document.querySelector('.input')
-inputTaxt.textContent = evt.currentTarget.value;
-const textareaTaxt = document.querySelector('textarea')
-textareaTaxt.textContent = evt.currentTarget.value;
-formData = `${inputTaxt.textContent} ${textareaTaxt.textContent} `;
-
+  let inputTaxts = document.querySelector('.input')
+inputTaxts.textContent = evt.currentTarget.email.value;
+let textareaTaxts = document.querySelector('textarea')
+textareaTaxts.textContent = evt.currentTarget.message.value;
+formData = {inputTaxts, textareaTaxts};
 const valueForm = JSON.stringify(formData);
 const valueFormParse = JSON.parse(valueForm);
 console.log(valueFormParse);
