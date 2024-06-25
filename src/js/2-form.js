@@ -16,12 +16,14 @@ formTrackChanges.addEventListener('input', handlerinput);
 function handlerinput(evt) {
   localStorage.setItem(localStorageKey, evt.target.value);
 
-  let inputTaxts = document.querySelector('.input')
-inputTaxts.textContent = evt.currentTarget.email.value;
-let textareaTaxts = document.querySelector('textarea')
-textareaTaxts.textContent = evt.currentTarget.message.value;
-
-formData = {email: `${inputTaxts.email.value}`, message: `${textareaTaxts.message.value}` };
+//   let inputTaxts = document.querySelector('.input')
+// inputTaxts.textContent = evt.currentTarget.email.value;
+// let textareaTaxts = document.querySelector('textarea')
+// textareaTaxts.textContent = evt.currentTarget.message.value;
+formTrackChanges.textContent = evt.currentTarget.email.value;
+formTrackChanges.textContent = evt.currentTarget.message.value;
+// formData = {email.value}
+ formData = {email: `${inputTaxts.email.value}`, message: `${textareaTaxts.message.value}` };
 const valueForm = JSON.stringify(formData);
 const valueFormParse = JSON.parse(valueForm);
 console.log(valueFormParse);
