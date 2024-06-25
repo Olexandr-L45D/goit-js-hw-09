@@ -21,7 +21,7 @@ inputTaxts.textContent = evt.currentTarget.email.value;
 let textareaTaxts = document.querySelector('textarea')
 textareaTaxts.textContent = evt.currentTarget.message.value;
 
-formData = {inputTaxts, textareaTaxts};
+formData = {email: `${inputTaxts.email.value}`, message: `${textareaTaxts.message.value}` };
 const valueForm = JSON.stringify(formData);
 const valueFormParse = JSON.parse(valueForm);
 console.log(valueFormParse);
