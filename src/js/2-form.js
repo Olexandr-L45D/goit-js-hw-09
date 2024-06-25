@@ -11,8 +11,11 @@ const localStorageKey = "feedback-form-state";
 inputTaxts.value = localStorage.getItem(localStorageKey);
 textareaTaxts.value = localStorage.getItem(localStorageKey);
 
-formTrackChanges.addEventListener("input", (evt) => {
+formTrackChanges.addEventListener('input', handlerinput);
+
+function handlerinput(evt) {
   localStorage.setItem(localStorageKey, evt.target.value);
+  
   let inputTaxts = document.querySelector('.input')
 inputTaxts.textContent = evt.currentTarget.email.value;
 let textareaTaxts = document.querySelector('textarea')
@@ -22,7 +25,7 @@ formData = {email: `${inputTaxts.email.value}`, message: `${textareaTaxts.messag
 const valueForm = JSON.stringify(formData);
 const valueFormParse = JSON.parse(valueForm);
 console.log(valueFormParse);
-});
+};
 
 formTrackChanges.addEventListener("submit", (evt) => {
   evt.preventDefault();
